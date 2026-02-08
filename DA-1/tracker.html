@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- 
+  ========================================
+  PAGE 5: RIDE TRACKER - CYCLE-O-PAEDIA
+  ========================================
+  JavaScript / Browser API Concepts Covered:
+  - Browser Geolocation API
+  - GPS concepts (Lat/Long)
+  - JavaScript Objects & Access
+  - Dynamic Content Injection
+  - Event Handling
+  - UI state management
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Your Ride | Cycle-O-Paedia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Cycle-O-Paedia</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="types.html">Types</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Ride Tracking Dashboard</h1>
+
+    <div class="form-container" style="text-align: center;">
+      <div class="tracker-status">
+        <h3 id="trackerStatus">System Ready</h3>
+        <p>Click the button below to fetch your current GPS coordinates using the Browser Geolocation API.</p>
+      </div>
+
+      <div id="locationData" class="location-data">
+        <!-- Data will be injected here by script.js -->
+        <p>Coordinates will appear here...</p>
+      </div>
+
+      <!-- JavaScript Concept: Event Listener Target -->
+      <button id="trackBtn" class="btn">Fetch My Location</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Cycle-O-Paedia. Designed by Abhi Vardhan and Aravind.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

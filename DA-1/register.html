@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- 
+  ========================================
+  PAGE 4: REGISTRATION - CYCLE-O-PAEDIA
+  ========================================
+  HTML/JavaScript Concepts Covered:
+  - Form elements and input types
+  - Required fields and placeholders
+  - Event Handling (onsubmit)
+  - DOM Access (getElementById)
+  - JavaScript Validation (Regex)
+  - LocalStorage persistence
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Pack | Cycle-O-Paedia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Cycle-O-Paedia</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="types.html">Types</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Event Registration</h1>
+
+    <div class="form-container">
+      <p style="margin-bottom: 2rem; color: #666;">Ready to join the ride? Register for our upcoming live events and
+        community meetups below.</p>
+
+      <!-- HTML Concept: Form Identification and Handling -->
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="eventSelect">Select Event</label>
+          <select id="eventSelect" required>
+            <option value="" disabled selected>Choose an event...</option>
+            <option value="City Cruise">Sunday Morning City Cruise (Live Now)</option>
+            <option value="Mountain Workshop">Mountain Trail Technical Workshop (Next Week)</option>
+            <option value="Beachside BBQ">Beachside BBQ & Ride (Upcoming)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="example@domain.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="participants">Number of Participants</label>
+          <input type="number" id="participants" min="1" max="10" value="1" required>
+        </div>
+
+        <div class="form-group">
+          <label>Gender</label>
+          <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+            <label style="font-weight: normal;"><input type="radio" name="gender" value="Male" checked> Male</label>
+            <label style="font-weight: normal;"><input type="radio" name="gender" value="Female"> Female</label>
+            <label style="font-weight: normal;"><input type="radio" name="gender" value="Other"> Other</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Cycling Experience</label>
+          <select id="experience">
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced / Pro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Contact Number</label>
+          <input type="tel" id="contact" placeholder="+1 234 567 890" required>
+        </div>
+
+        <button type="submit" class="btn" style="width: 100%;">Confirm Registration</button>
+
+        <!-- Feedback target for JavaScript -->
+        <div id="formMessage"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Cycle-O-Paedia. Designed by Abhi Vardhan and Aravind.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

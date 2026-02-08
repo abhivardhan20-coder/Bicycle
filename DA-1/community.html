@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!-- 
+  ========================================
+  PAGE 3: COMMUNITY - CYCLE-O-PAEDIA
+  ========================================
+  Concepts Covered:
+  - Interactive UI Components
+  - Live Event Status Indicators
+  - Community Feed Layout
+  - Glassmorphism Effects
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community | Cycle-O-Paedia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .event-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary);
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .event-card:hover {
+            transform: translateX(10px);
+        }
+
+        .event-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .status-live {
+            background: #ffeaa7;
+            color: #d63031;
+            animation: pulse 2s infinite;
+        }
+
+        .status-upcoming {
+            background: #dff9fb;
+            color: #0984e3;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .community-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .chat-box {
+            background: white;
+            border-radius: 15px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow);
+        }
+
+        .chat-header {
+            padding: 1rem;
+            background: var(--dark);
+            color: white;
+            border-radius: 15px 15px 0 0;
+            font-weight: bold;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background: #f1f2f6;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+
+        .msg-received {
+            background: white;
+            align-self: flex-start;
+        }
+
+        .msg-sent {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+
+        .chat-input {
+            padding: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .sidebar-widget {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .member-spotlight {
+            text-align: center;
+        }
+
+        .member-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 900px) {
+            .community-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Cycle-O-Paedia</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="types.html">Types</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="section-title">Community Hub</h1>
+
+        <div class="community-grid">
+            <div class="main-content">
+                <section style="padding: 0 0 2rem 0;">
+                    <h2>Live Events & Rides</h2>
+                    <div class="event-card">
+                        <div>
+                            <span class="event-status status-live">Live Now</span>
+                            <h3>Sunday Morning City Cruise</h3>
+                            <p>Gathering at Central Park East Gate. All levels welcome!</p>
+                        </div>
+                        <a href="#" class="btn">Join Ride</a>
+                    </div>
+
+                    <div class="event-card">
+                        <div>
+                            <span class="event-status status-upcoming">Next Week</span>
+                            <h3>Mountain Trail Technical Workshop</h3>
+                            <p>Learn how to handle rocky descents and sharp turns.</p>
+                        </div>
+                        <a href="#" class="btn">Register</a>
+                    </div>
+                </section>
+
+                <section style="padding: 0;">
+                    <h2>Community Interaction</h2>
+                    <div class="chat-box">
+                        <div class="chat-header">Global Cyclist Chat</div>
+                        <div class="chat-messages">
+                            <div class="message msg-received">
+                                <strong>Alex:</strong> Just finished a 50km ride! My legs are like jelly but it feels
+                                amazing.
+                            </div>
+                            <div class="message msg-received">
+                                <strong>Sara:</strong> @Alex Awesome job! Which trail did you take?
+                            </div>
+                            <div class="message msg-sent">
+                                <strong>Cycle-O-Bot:</strong> Welcome to the hub! Don't forget to track your Sunday
+                                cruise.
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" placeholder="Share your ride story..."
+                                style="flex: 1; border: 1px solid #ddd; border-radius: 5px; padding: 0.5rem;">
+                            <button class="btn" style="padding: 0.5rem 1rem;">Send</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Member Spotlight</h3>
+                    <div class="member-spotlight">
+                        <div class="member-img">🚴‍♂️</div>
+                        <h4>David "The Climber" Smith</h4>
+                        <p>David completed his 100th mountain ascent yesterday! Truly inspiring.</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>Local Chapters</h3>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">📍 New York Riders (Active)</li>
+                        <li style="margin-bottom: 0.5rem;">📍 London Cycle Club (2 events)</li>
+                        <li style="margin-bottom: 0.5rem;">📍 Tokyo Speedsters (Upcoming)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cycle-O-Paedia. Designed by Abhi Vardhan and Aravind.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

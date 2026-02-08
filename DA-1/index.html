@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- 
+  ========================================
+  PAGE 1: HOME - CYCLE-O-PAEDIA
+  ========================================
+  HTML5 Concepts Covered:
+  - DOCTYPE Declaration
+  - Language attribute
+  - Meta tags (Charset, Viewport)
+  - Semantic Elements (<header>, <nav>, <main>, <section>, <footer>)
+  - Audio and Video components
+  - External Resources Integration
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cycle-O-Paedia | Home</title>
+  <!-- CSS Concepts Covered: Importing external fonts and stylesheets -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Cycle-O-Paedia</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="types.html">Types</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HTML5 Concept: Sectioning elements -->
+    <section class="hero">
+      <h1>The Joy of Cycling</h1>
+      <p>Explore the world on two wheels. Healthy, green, and liberating.</p>
+    </section>
+
+    <section class="container">
+      <h2 class="section-title">Why Experience Cycle-O-Paedia?</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="card-content">
+            <h3>Eco-Friendly</h3>
+            <!-- HTML5 Concept: Unordered List -->
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+              <li>Zero emissions</li>
+              <li>Minimal manufacturing waste</li>
+              <li>Noise pollution reduction</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-content">
+            <h3>Common Terms</h3>
+            <!-- HTML5 Concept: Description List -->
+            <dl style="margin-top: 0.5rem;">
+              <dt><strong>Drivetrain</strong></dt>
+              <dd>The parts that move the bike.</dd>
+              <dt><strong>Derailleur</strong></dt>
+              <dd>The mechanism that shifts gears.</dd>
+            </dl>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-content">
+            <h3>Community</h3>
+            <p>Join a global movement of riders. From cycle clubs to daily commuters, the cycling community is diverse
+              and welcoming.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" style="background: white;">
+      <h2 class="section-title">Experience the Ride</h2>
+      <div class="media-container">
+        <!-- HTML5 Concept: Video Element with Source and Controls -->
+        <h3>Watch: Cycling Adventures</h3>
+        <video controls poster="assets/pexels-pixabay-248559.jpg">
+          <source src="assets/13888926_1920_1080_25fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- HTML5 Concept: Hidden Background Audio with Autoplay-->
+        <audio autoplay>
+          <source src="assets/0208.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
+  </main>
+
+  <!-- HTML5 Concept: Footer element -->
+  <footer>
+    <div class="footer-cols">
+      <div>
+        <h4>About Us</h4>
+        <p>Leading educational platform for bicycle enthusiasts.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <p>Ride trails, city paths, and mountains.</p>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <p>Join our global community today.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Cycle-O-Paedia. Designed by Abhi Vardhan and Aravind.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
